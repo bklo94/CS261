@@ -1,0 +1,16 @@
+/*
+ * CS 261 Data Structure
+ * Assignment 7
+ * Name: Brandon Lo
+ * Date: 3/19/16
+ */
+
+ 1. The graph in the code is an adjacency list.
+
+ 2. Graphs 2 and 3 are connected because the output shows each vertex having a path to all of the other existing vertices in the graph in both depth-first search or breadth-first search.
+
+ 3. In an undirected graph, then reversing the path of the traversal would not affect the output because the edges can be crossed in either direction. If the graph is a directed graph, the output would change because the accessible edges would change depending on the start/end points.
+
+ 4. One con for breadth-first search is that it uses more memory than depth-first search, but breadth-first search visits all reachable nodes. Depth-first search does not have a guaranteed chance to visit all nodes, but depth-first search is able to possibly find a solution faster than breadth-first search, but the path it might get stuck in a path that is not able to be get out of. In breadth-first search it searches all possible paths and returns the shortest path and thus would not get stuck in a "infinite" path.
+
+ 5. The runtime complexity of breadth-first search and depth-first search is O(E) where E is the total number of edges in the graph.

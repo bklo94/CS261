@@ -1,0 +1,16 @@
+CS 261 Data Structures
+Assignment 6
+Name: Brandon Lo
+Date: 3/12/17
+
+1. Two examples that would have the same value using hashFunction1, but using hashFunction2 is something like team and meat because hashFunction2 accounts for order of characters, while hashFunction1 doesn't.
+
+2. hashFunction2 is superior to hashFunction1 because it accounts for the order of characters based on position and ASCII value, which helps reduce the number of links assigned to a bucket. Thus it maintains O(n)) search.
+
+3. No it is not possible since the same file would have the same number words and thus the same number of HashLinks.
+
+4.No it is not possible since the the hashMapTableLoad function returns the ratio of the number of unique words(links) and the number of buckets. Thus since they both resize at O(n) rate, then the ratio remains the same.
+
+5. Yes, it is possible since hashFunction1 and hashFunction2 both will have different number of collisions, thus one of the functions will have more empty buckets than the other.
+
+6. Yes there is a difference in the number of empty buckets depending on the table size. Then 997 is used, the modulous operation for the index will have a decreased chance of a collision since it is a prime factor, while 1000 can have multiple factors since it is not prime.

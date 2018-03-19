@@ -1,0 +1,38 @@
+CS261- Assignment 2 - amortizedAnalysis.txt*/
+Name:Brandon Lo
+Date:1/22/17
+Solution description: Anlysis of Big O operation of an array and array stack.
+
+
+1. How many cost units are spent in the entire process of performing 32 consecutive push
+operations on an empty array which starts out at capacity 8, assuming that the array
+will double in capacity each time a new item is added to an already full dynamic array?
+As N (ie. the number of pushes) grows large, under this strategy for resizing, what is
+the big-oh complexity for a push?
+
+Total units: 56 units total in 32 operations
+
+Big O per unit push operation = O(1)+ time = O(1)
+
+2. How many cost units are spent in the entire process of performing 32 consecutive push
+operations on an empty array which starts out at capacity 8, assuming that the array
+will grow by a constant 2 spaces each time a new item is added to an already full
+dynamic array? As N (ie. the number of pushes) grows large, under this strategy for
+resizing, what is the big-oh complexity for a push?
+
+Total units: 260 units total in 32 operations
+
+Big O per unit push operation: O(n)
+
+3. Suppose that a dynamic array stack doubles its capacity when it is full, and shrinks
+(on Pop only) its capacity by half when the array is half full or less. Can you devise
+a sequence of N push() and pop() operations which will result in poor performance
+(O(N^2) total cost)? How might you adjust the array's shrinking policy to avoid this?
+(Hint: You may assume that the initial capacity of the array is N/2.)
+
+You can cause a repeating and frequent push then pop operation that will cause poor performance.
+Since we can assume that the starting size is N/2 and the frequent repeating pus, pop such as:
+push, pop, push, pop...
+Each push and pop have a cost of O(n), which means that total cost of a freuqent push/pop in a dynamic array stack is
+O(n) * O(n) or O(n^2).
+In order to avoid this you can adjust the array's shrinking policy by 1/2 whenever the array is 1/4 full, so initial capacity, N/2 would be N/4 so it would cost less.
